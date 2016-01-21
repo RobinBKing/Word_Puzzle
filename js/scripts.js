@@ -29,10 +29,14 @@ var puzzleSentence = "";
 $(document).ready(function() {
   $("form#puzzle").submit(function(event) {
     var wordPuzzle = convertSentence($("input#englishSentence").val());
+    if(wordPuzzle === ""){
+      alert("Please enter a sentence with vowels");
+    }
+    else {
+      $(".wordPuzzle").text(wordPuzzle);
+      $("#result").show();
+    }
 
-    $(".wordPuzzle").text(wordPuzzle);
-
-    $("#result").show();
     event.preventDefault();
   });
 });
