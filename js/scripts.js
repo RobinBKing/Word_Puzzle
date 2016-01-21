@@ -7,12 +7,7 @@ var vowelCheck = function(sentence) {
     return false;
   }
 };
-//
-// var sentenceParse = function(sentence) {
-//   var parsedSentence = sentence.split(" ");
-//   return parsedSentence;
-// }
-//
+
 var convertSentence = function(sentence) {
 var puzzleSentence = "";
   if (vowelCheck(sentence)){
@@ -29,15 +24,15 @@ var puzzleSentence = "";
   }
   return puzzleSentence;
 };
-//
-// //interface
-// $(document).ready(function() {
-//   $("form#puzzle").submit(function(event) {
-//     var converter = pigLatinSentence($("input#englishSentence").val());
-//
-//     $(".converter").text(converter);
-//
-//     $("#result").show();
-//     event.preventDefault();
-//   });
-// });
+
+//interface
+$(document).ready(function() {
+  $("form#puzzle").submit(function(event) {
+    var wordPuzzle = convertSentence($("input#englishSentence").val());
+
+    $(".wordPuzzle").text(wordPuzzle);
+
+    $("#result").show();
+    event.preventDefault();
+  });
+});
