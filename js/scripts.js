@@ -13,14 +13,22 @@ var vowelCheck = function(sentence) {
 //   return parsedSentence;
 // }
 //
-// var pigLatinSentence = function(sentence) {
-//   sentenceParse = sentenceParse(sentence);
-//   var pigLatin = "";
-//   for(var i = 0; i < sentenceParse.length; i++){
-//     pigLatin += " " + translate(sentenceParse[i]);
-//   }
-//   return puzzleSentence;
-// }
+var convertSentence = function(sentence) {
+var puzzleSentence = "";
+  if (vowelCheck(sentence)){
+    puzzleSentence = sentence.replace(/a/g,'-')
+                             .replace(/e/g,'-')
+                             .replace(/i/g,'-')
+                             .replace(/o/g,'-')
+                             .replace(/u/g,'-')
+                             .replace(/A/g,'-')
+                             .replace(/E/g,'-')
+                             .replace(/I/g,'-')
+                             .replace(/O/g,'-')
+                             .replace(/U/g,'-');
+  }
+  return puzzleSentence;
+};
 //
 // //interface
 // $(document).ready(function() {
