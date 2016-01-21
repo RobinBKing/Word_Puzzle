@@ -1,12 +1,12 @@
 
-// var vowelCheck = function(word) {
-//   if (word.match(/^[aeiouAEIOU]/)) {
-//     return true;
-//   }
-//   else{
-//     return false;
-//   }
-// };
+var vowelCheck = function(sentence) {
+  if (sentence.match(/[aeiouAEIOU]/)) {
+    return true;
+  }
+  else{
+    return false;
+  }
+};
 //
 // var sentenceParse = function(sentence) {
 //   var parsedSentence = sentence.split(" ");
